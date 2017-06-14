@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Generic validation form">
+    <meta name="author" content="Bhaskararao Gummidi">
+	<title>Registration form</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+</head>
+
+<body>
+<form name="myform" method="get" action="" onsubmit="return validate()">  <!-- starting of the form -->
+	<div class="panel panel-default">
+		<div class="panel-heading text-center"><h3><b>Registration Form</b></h3></div>
+			<div class="panel panel-body">						<!-- first panel staring -->
+				<div class="row">
+					<div class="col-lg-9">
+						<div class="col-lg-4">
+							Fullname :
+						</div>
+						<div class="col-lg-5">
+							<input type="text" name="firstname" id="uname" placeholder="Your name" pattern="^[a-z\d\.]{6,}$" class="form-control">
+							<span id="nameerror"></span>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-9 ">
+						<div class="col-lg-4">
+							Email :
+						</div>
+						<div class="col-lg-5">
+							<input type="email" name="email" placeholder="e.g.@gmail.com" class="form-control" id="emailid">
+							<span id="emailerror"></span>
+						</div><br>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-9 ">
+						<div class="col-lg-4">
+							Password :
+						</div>
+						<div class="col-lg-5">
+							<input type="Password" name="pwd" placeholder="Password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" class="form-control" id="password">
+							<span id="pwderror"></span>
+						</div><br>
+					</div>
+				</div>
+			</div>											<!-- first panel ending -->
+			<div class="panel panel-body"> 				
+				<div class="row">
+					<div class="col-lg-9 ">
+						<div class="col-lg-4">
+							State :
+						</div>
+						<div class="col-lg-5">
+							<select id="stateid" name="State">
+								<option value="">Select</option>
+								<option value="1">Assam</option>
+								<option value="2">Bihar</option>
+								<option value="3">West Bengal</option>
+								<option value="4">Andhra Pradesh</option>
+								<option value="5">Telangana</option>
+							</select>
+							<span id="stateerror"></span>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-9 ">
+						<div class="col-lg-4">
+							Confirmation :
+						</div>
+						<div class="col-lg-5">
+							Yes<input type="radio" name="select" id="yesid">
+							No<input type="radio" name="select" id="noid">
+							<span id="cnferror"></span>
+						</div><br>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-9 ">
+						<div class="col-lg-4">
+							
+						</div>
+						<div class="col-lg-5">
+							<input type="checkbox" name="alert" id="checkboxid">Select for latest updates
+							<span id="alerterror"></span>
+						</div><br>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-lg-9 ">
+						<div class="col-lg-4">
+							Languages known :
+						</div>
+						<div class="col-lg-5">
+							Telugu<input type="checkbox" name="language" id="teluguid">
+							Hindi<input type="checkbox" name="language" id="englishid"> 
+							English<input type="checkbox" name="language" id="hindiid">
+							<span id="langerror"></span>
+						</div><br>
+					</div>
+				</div>
+			</div>								<!-- second panel ending -->
+			<div class="panel panel-body">
+				<div class="row">
+					<div class="col-lg-9 ">
+						<div class="col-lg-4">
+							Interested in :
+						</div>
+						<div class="col-lg-5">
+							<select id="professionid" name="profession" multiple>
+								<option value="">Software engineer</option>
+								<option value="1">Programmer</option>
+								<option value="2">Hardware engineer</option>
+								<option value="3">System administrator</option>
+								<option value="4">Development engineer</option>
+								<option value="5">Designer</option>
+							</select>
+							<span id="interror"></span>
+						</div><br>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-9 ">
+						<div class="col-lg-4">
+							Other Details :
+						</div>
+						<div class="col-lg-5">
+							<textarea rows="4" cols="50" name="text" class="form-control" id="textareaid">
+							</textarea>
+							<span id="txterror"></span>
+						</div><br>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-9 ">
+						<div class="col-lg-4">
+							Date-Time:
+						</div>
+						<div class="col-lg-5">
+							<input type="text" name="text" id="datetimeid" class="form-control" placeholder="DD/MM/YYYY HH:MM:SS">
+							<span id="timeerror"></span>
+						</div><br>
+					</div>
+				</div><br>	
+				<div class="row">
+					<div class="col-lg-12 text-center">
+						<button class="btn-primary">Register</button>
+					</div>
+				</div>	
+			</div>			<!-- third panel ending -->
+		</div>					
+		</div>
+</form>			<!-- form ending -->
+</body>
+<script src="./assets/js/generic.js"></script>
+<script src="./assets/js/bootstrap.js"></script>
+</html>

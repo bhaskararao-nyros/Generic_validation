@@ -1,0 +1,33 @@
+.col-lg-4 , .col-lg-5
+{
+	padding-top: 10px;
+}
+.panel
+{
+	border-style:groove;
+	border-width: 5px;
+}
+.panel-body
+{
+	background-color: #629b30 ;
+	margin-bottom: 5px;
+}
+p
+{
+	color: red;
+	background-color: white;
+	text-align: center;
+}
+.panel-default .panel-heading
+{
+	background: #f27411 !important ;
+}
+.col-lg-4
+{
+	font-weight: bold;
+}
+span
+{
+	color: red;
+	background-color: white;
+}
