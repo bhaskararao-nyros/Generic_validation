@@ -9,7 +9,6 @@ function validate()
 	validfields = validatefields();
 	if(validfields)
 	{
-
 		validcombo = validatecombo();	
 		if(validcombo)
 		{
@@ -23,7 +22,7 @@ function validate()
 					if(txtarea)
 					{
 						datetime = datetimecheck();
-						return true;
+						return datetime;
 					}
 				}
 			}
@@ -229,7 +228,6 @@ function validatefields()
 			alert("Validation Succesful");
 		}
 	}
-
 
 	
 	
